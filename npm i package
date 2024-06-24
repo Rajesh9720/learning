@@ -1,0 +1,4 @@
+json-server --watch data/db.json
+npm install chart.js@^4.0.0 ng2-charts@^4.0.0 --legacy-peer-deps
+npm install chart.js ng2-charts --save
+npm install -g json-server
