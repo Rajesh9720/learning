@@ -1,0 +1,7 @@
+<div *ngIf="comments$ | async as comments">
+    <ul>
+      <li *ngFor="let comment of comments">
+        {{ comment.body }}
+      </li>
+    </ul>
+  </div>

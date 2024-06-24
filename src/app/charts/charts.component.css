@@ -1,0 +1,17 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 20fr); /* Three columns of equal width */
+  gap: 5px; /* Gap between items */
+}
+
+.col-lg-4 {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+canvas {
+  width: 900px; /* Medium width */
+  height: 750px; /* Medium height */
+  border: 1px solid #ccc; /* Optional: Add border for visual separation */
+}

@@ -1,0 +1,15 @@
+{
+  "produts": [],
+  "sales": [
+    { "year": 2022, "amount": 2000, "colorcode": "blue" },
+    { "year": 2021, "amount": 1800, "colorcode": "red" },
+    { "year": 2020, "amount": 1500, "colorcode": "green" },
+    { "year": 2019, "amount": 1700, "colorcode": "yellow" },
+    { "year": 2018, "amount": 1600, "colorcode": "purple" },
+    { "year": 2017, "amount": 1400, "colorcode": "orange" },
+    { "year": 2016, "amount": 1900, "colorcode": "pink" },
+    { "year": 2015, "amount": 1300, "colorcode": "black" },
+    { "year": 2014, "amount": 1200, "colorcode": "brown" },
+    { "year": 2013, "amount": 1100, "colorcode": "grey" }
+  ]
+}

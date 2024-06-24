@@ -1,0 +1,79 @@
+<div class="table-responsive">
+  <h1>Project List for {{ projectname }}</h1>
+  <table
+    *ngIf="projectlistdata$ | async as projectlistdata; else loading"
+    class="table align-middle mb-0"
+  >
+    <thead class="table-light">
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Bio</th>
+        <th>Full Name</th>
+        <th>Education</th>
+        <th>Location</th>
+        <th>Status Message</th>
+        <th>Hobbies</th>
+        <th>Interests</th>
+        <th>Languages</th>
+        <th>Followers Count</th>
+        <th>Following Count</th>
+        <th>Posts Count</th>
+        <th>Work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let project of projectlistdata"
+        (click)="showUserDetails(project)"
+      >
+        <td>{{ project.username }}</td>
+        <td>{{ project.email }}</td>
+        <td>{{ project.bio }}</td>
+        <td>{{ project.fullName }}</td>
+        <td>{{ project.education }}</td>
+        <td>{{ project.location }}</td>
+        <td>{{ project.statusMessage }}</td>
+        <td>{{ project.hobbies.join(", ") }}</td>
+        <td>{{ project.interests.join(", ") }}</td>
+        <td>{{ project.languages.join(", ") }}</td>
+        <td>{{ project.followersCount }}</td>
+        <td>{{ project.followingCount }}</td>
+        <td>{{ project.postsCount }}</td>
+        <td>{{ project.work }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #loading>
+    <div>Loading...</div>
+  </ng-template>
+
+  <div *ngIf="selectedUser" style="margin-top: 20px">
+    <h2>User Details</h2>
+    <ul>
+      <li><strong>Username:</strong> {{ selectedUser.username }}</li>
+      <li><strong>Email:</strong> {{ selectedUser.email }}</li>
+      <li><strong>Bio:</strong> {{ selectedUser.bio }}</li>
+      <li><strong>Full Name:</strong> {{ selectedUser.fullName }}</li>
+      <li><strong>Education:</strong> {{ selectedUser.education }}</li>
+      <li><strong>Location:</strong> {{ selectedUser.location }}</li>
+      <li><strong>Status Message:</strong> {{ selectedUser.statusMessage }}</li>
+      <li><strong>Hobbies:</strong> {{ selectedUser.hobbies.join(", ") }}</li>
+      <li>
+        <strong>Interests:</strong> {{ selectedUser.interests.join(", ") }}
+      </li>
+      <li>
+        <strong>Languages:</strong> {{ selectedUser.languages.join(", ") }}
+      </li>
+      <li>
+        <strong>Followers Count:</strong> {{ selectedUser.followersCount }}
+      </li>
+      <li>
+        <strong>Following Count:</strong> {{ selectedUser.followingCount }}
+      </li>
+      <li><strong>Posts Count:</strong> {{ selectedUser.postsCount }}</li>
+      <li><strong>Work:</strong> {{ selectedUser.work }}</li>
+    </ul>
+  </div>
+</div>
